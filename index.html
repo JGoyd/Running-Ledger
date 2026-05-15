@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Running Ledger - Joseph R. Goydish II</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f8f5;
+      --ink: #172019;
+      --muted: #5d6a62;
+      --line: #d9dfd7;
+      --panel: #ffffff;
+      --accent: #0b6b58;
+      --accent-2: #9b3d24;
+      --code: #eef2ee;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: #ffffff;
+    }
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 20px;
+    }
+    .hero {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
+      align-items: end;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 4vw, 4rem);
+      line-height: 1;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.25rem;
+    }
+    p { margin: 0 0 14px; }
+    a { color: var(--accent); }
+    .meta {
+      display: grid;
+      gap: 8px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 8px;
+    }
+    .meta div {
+      display: grid;
+      gap: 4px;
+    }
+    .label {
+      color: var(--muted);
+      font-size: .78rem;
+      text-transform: uppercase;
+    }
+    code, pre {
+      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+      background: var(--code);
+      border-radius: 6px;
+    }
+    code { padding: 2px 5px; }
+    pre {
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--line);
+    }
+    main .wrap {
+      display: grid;
+      gap: 22px;
+    }
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 650;
+    }
+    .button.primary {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #fff;
+    }
+    .grid {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: #fff;
+    }
+    .card strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .94rem;
+    }
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      color: var(--muted);
+      font-size: .78rem;
+      text-transform: uppercase;
+    }
+    details {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: #fff;
+    }
+    details + details { margin-top: 12px; }
+    summary {
+      cursor: pointer;
+      font-weight: 750;
+    }
+    .hash {
+      word-break: break-all;
+      font-size: .82rem;
+    }
+    .tag {
+      display: inline-block;
+      color: #fff;
+      background: var(--accent-2);
+      border-radius: 999px;
+      padding: 2px 8px;
+      font-size: .78rem;
+      font-weight: 750;
+    }
+    footer {
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+    }
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; }
+      table { font-size: .86rem; }
+      th, td { padding: 8px 6px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap hero">
+      <div>
+        <h1>Running Ledger</h1>
+        <p>Public verification index for anchors, disclosures, certifications, and signed work-log entries.</p>
+        <div class="actions">
+          <a class="button primary" href="running-ledger.txt">Canonical ledger</a>
+          <a class="button" href="running-ledger.txt.asc">PGP signature</a>
+          <a class="button" href="running-ledger.txt.asc.ots">OTS proof</a>
+        </div>
+      </div>
+      <div class="meta">
+        <div>
+          <span class="label">Holder</span>
+          <strong>Joseph R. Goydish II</strong>
+        </div>
+        <div>
+          <span class="label">Fingerprint</span>
+          <code>6DCB 4235 1237 A98B B474 0070 B36F FC36 1AE5 DAF6</code>
+        </div>
+        <div>
+          <span class="label">Last updated</span>
+          <strong>2026-05-15 UTC</strong>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section>
+        <h2>Verification</h2>
+        <pre>gpg --keyserver hkps://keys.openpgp.org --recv-keys 6DCB42351237A98BB4740070B36FFC361AE5DAF6
+gpg --verify running-ledger.txt.asc running-ledger.txt
+ots verify running-ledger.txt.asc.ots</pre>
+        <p>A valid OpenPGP signature verifies that the ledger was signed by the private key corresponding to the listed fingerprint. A confirmed OpenTimestamps proof supports that the detached signature existed by the witnessed Bitcoin block time.</p>
+      </section>
+
+      <section>
+        <h2>Public Anchors</h2>
+        <table>
+          <thead>
+            <tr><th>Item</th><th>Component</th><th>Publication</th><th>CVSS</th><th>Reference</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>CVE-2025-24085</td><td>CoreMedia use-after-free</td><td>2025-01-27</td><td><span class="tag">10.0</span></td><td><a href="https://github.com/cisagov/vulnrichment/issues/194">CISA #194</a></td></tr>
+            <tr><td>CVE-2025-24201</td><td>WebKit out-of-bounds write</td><td>2025-03-11</td><td><span class="tag">10.0</span></td><td><a href="https://github.com/cisagov/vulnrichment/issues/194">CISA #194</a></td></tr>
+            <tr><td>CVE-2025-31200</td><td>CoreAudio memory corruption via audio decode</td><td>2025-04-16</td><td>9.8</td><td><a href="https://github.com/cisagov/vulnrichment/issues/200">CISA #200</a></td></tr>
+            <tr><td>CVE-2025-31201</td><td>Pointer Authentication bypass</td><td>2025-04-16</td><td>9.8</td><td><a href="https://github.com/cisagov/vulnrichment/issues/200">CISA #200</a></td></tr>
+            <tr><td>CVE-2025-43300</td><td>ImageIO out-of-bounds write</td><td>2025-08-20</td><td><span class="tag">10.0</span></td><td><a href="https://github.com/cisagov/vulnrichment/issues/201">CISA #201</a></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Work Log</h2>
+        <details open>
+          <summary>2026 submissions and disclosures</summary>
+          <table>
+            <thead><tr><th>Date</th><th>Venue</th><th>Entry</th></tr></thead>
+            <tbody>
+              <tr><td>2026-03-24</td><td>Taiwan / NCC</td><td>Taiwan Mobile infrastructure relay-mesh referral. <span class="hash">4530081B986C0C084863FFA3102823DDCC81CDE0D9C1DC0E1B28BE2BA70F2AD7</span></td></tr>
+              <tr><td>2026-04-08</td><td>Microsoft MSRC</td><td>MSRC Case 112639, MIME type-confusion / Defender / Exchange Online attachment inspection bypass. <span class="hash">274B18C9D3851F41DF33EB32691F4E8E0B46C5B68D7AC2A13D2CDCDD6C7C7722</span></td></tr>
+              <tr><td>2026-04-28</td><td>Slovakia / genpro.gov.sk</td><td>Complete-verification receipt, Tracking ID 260428070422263. <span class="hash">84C410150FA89CF48433C19399449CADF7C75F32AACD377ECD14554991C36489</span></td></tr>
+              <tr><td>2026-04-30</td><td>Lithuania / Panevezio OTNK skyrius</td><td>Submitted information added to criminal case file 01-1-03450-26. <span class="hash">603409F4B01BFED46D22D7129EC22A1969F1A32921654B3559FEBBD4E62BC17D</span></td></tr>
+              <tr><td>2026-05-04</td><td>EC / OLAF</td><td>Mandelson / Carbyne concealment disclosure, Ref 00Db00K8yP.!500Sk019RuGn. <span class="hash">42F922168AFC25FD0AB6813F3782F16C8F1DA82365615B3FE8272964016371F7</span></td></tr>
+              <tr><td>2026-05-04</td><td>Singapore / CPIB</td><td>Corruption Reporting Form submission, Tracking ID 69f824dfe5ef7daf3b78ccee. <span class="hash">B0F4D9EED94BDC6D5C351296CC1949CA7D7106E0E8CFFA5B97DB54727608B137</span></td></tr>
+              <tr><td>2026-05-05</td><td>DOJ / FARA Public</td><td>Karim Wade / Macky Sall / Epstein-funded lobby disclosure. <span class="hash">83EF754869D953DC808130334E07719EC1210FE28EED8E6479482A0CEBBDD925</span></td></tr>
+              <tr><td>2026-05-05</td><td>Massachusetts AGO</td><td>MIT Media Lab / institutional governance complaint. <span class="hash">A797257A9FBD19EFEC4BDA2FB023597EAFABEA143A4D9E9EBE8996F1B302CF62</span></td></tr>
+              <tr><td>2026-05-06</td><td>IRS</td><td>Form 211 under IRC 7623(b), Southern Trust / Financial Trust / Epstein Estate. <span class="hash">653F9D1F3497C51C955A82EF1E1B2C36782468A9EB813104FADD8D72D0C6764F</span></td></tr>
+              <tr><td>2026-05-06</td><td>SEC</td><td>TCR submission 17780-976-067-126.</td></tr>
+              <tr><td>2026-05-11</td><td>FCA</td><td>Bank of China (UK) Limited advisory and acknowledgement, Case Ref 212278528. <span class="hash">5B77C1CE4B348B065D736D2E8B15F6015CBB2E434514511E18F35DC306127C4E</span></td></tr>
+              <tr><td>2026-05-13</td><td>Japan / ISA</td><td>ICRRA Article 70-1 visa-fraud referral. <span class="hash">1D4CA44C8DF651E89119E621ECE12BA48E41FB928BFD82D12474F8DF4916ECBC</span></td></tr>
+            </tbody>
+          </table>
+        </details>
+        <details>
+          <summary>2025 disclosures and certifications</summary>
+          <table>
+            <thead><tr><th>Date</th><th>Venue</th><th>Entry</th></tr></thead>
+            <tbody>
+              <tr><td>2025-04-22</td><td>NASA</td><td>TLS certificate-chain misconfiguration disclosure for webhosting-external.jpl.nasa.gov. <span class="hash">C3EDEDB6E86187484BC0F86E0A046AF65DC316983F6EAA23E679DC888E4A25BC</span></td></tr>
+              <tr><td>2025-12-25</td><td>Department of Energy / NNSA</td><td>DOE-417 electric emergency incident and disturbance report. <span class="hash">D203750DDB657BD350B69343F36BF0C9364378004D508E5572347760C38743C2</span></td></tr>
+              <tr><td>2025-03-18</td><td>CNVD</td><td>CNVD-2025-06744, Apple iOS / iPadOS buffer overflow, CNVD-YCGO-202503023656. <span class="hash">352A56FF1319E1B8138B1F4C6F55B652CF09CCD8C6784610E3A3EF6A9A80723C</span></td></tr>
+              <tr><td>2025-04-22</td><td>CNVD</td><td>CNVD-2025-07885, Apple memory reuse, CNVD-YCGO-202504012519. <span class="hash">D5BB17D5A27EABD32D272173116C90F89F12CDD912A26969115007383A7F21C8</span></td></tr>
+            </tbody>
+          </table>
+        </details>
+      </section>
+
+      <section>
+        <h2>Boundary</h2>
+        <div class="grid">
+          <div class="card"><strong>Canonical source</strong>The plain-text ledger remains the canonical artifact.</div>
+          <div class="card"><strong>Public pointer</strong>This repository publishes verification materials only.</div>
+          <div class="card"><strong>No secrets</strong>No private keys, wallet seeds, API keys, or packet bodies are stored here.</div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">Public verification pointer for fingerprint 6DCB 4235 1237 A98B B474 0070 B36F FC36 1AE5 DAF6.</div>
+  </footer>
+</body>
+</html>

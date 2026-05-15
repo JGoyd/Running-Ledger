@@ -2,7 +2,7 @@
 Identity: Joseph R. Goydish II
 PGP Fingerprint: 6DCB 4235 1237 A98B B474 0070 B36F FC36 1AE5 DAF6
 Last Updated (UTC): 2026-05-15
-Scope: Public vulnerability anchor trail and ongoing work index
+Scope: Public anchor trail and ongoing work index
 
 --- ANCHORS ---
 

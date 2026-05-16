@@ -186,7 +186,6 @@
         <div class="actions">
           <a class="button primary" href="running-ledger.txt">Canonical ledger</a>
           <a class="button" href="running-ledger.txt.asc">PGP signature</a>
-          <a class="button" href="running-ledger.txt.asc.ots">OTS proof</a>
         </div>
       </div>
       <div class="meta">
@@ -196,7 +195,7 @@
         </div>
         <div>
           <span class="label">Fingerprint</span>
-          <code>6DCB 4235 1237 A98B B474 0070 B36F FC36 1AE5 DAF6</code>
+          <code>4A04 1F50 6D89 4F5E E391 7438 6487 8B56 A2EB 2D11</code>
         </div>
         <div>
           <span class="label">Last updated</span>
@@ -210,10 +209,9 @@
     <div class="wrap">
       <section>
         <h2>Verification</h2>
-        <pre>gpg --keyserver hkps://keys.openpgp.org --recv-keys 6DCB42351237A98BB4740070B36FFC361AE5DAF6
-gpg --verify running-ledger.txt.asc running-ledger.txt
-ots verify running-ledger.txt.asc.ots</pre>
-        <p>A valid OpenPGP signature verifies that the ledger was signed by the private key corresponding to the listed fingerprint. A confirmed OpenTimestamps proof supports that the detached signature existed by the witnessed Bitcoin block time.</p>
+        <pre>gpg --keyserver hkps://keys.openpgp.org --recv-keys 4A041F506D894F5EE391743864878B56A2EB2D11
+gpg --verify running-ledger.txt.asc running-ledger.txt</pre>
+        <p>A valid OpenPGP signature verifies that the ledger was signed by the private key corresponding to the listed fingerprint.</p>
       </section>
 
       <section>
@@ -280,7 +278,7 @@ ots verify running-ledger.txt.asc.ots</pre>
   </main>
 
   <footer>
-    <div class="wrap">Public verification pointer for fingerprint 6DCB 4235 1237 A98B B474 0070 B36F FC36 1AE5 DAF6.</div>
+    <div class="wrap">Public verification pointer for fingerprint 4A04 1F50 6D89 4F5E E391 7438 6487 8B56 A2EB 2D11.</div>
   </footer>
 </body>
 </html>

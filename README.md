@@ -4,7 +4,7 @@ Public verification index for the running ledger signed by the OpenPGP key below
 
 ```text
 Holder:      Joseph R. Goydish II
-Fingerprint: 6DCB 4235 1237 A98B B474 0070 B36F FC36 1AE5 DAF6
+Fingerprint: 4A04 1F50 6D89 4F5E E391 7438 6487 8B56 A2EB 2D11
 Updated:     2026-05-15 UTC
 Scope:       Public anchor trail and ongoing work index
 ```
@@ -15,7 +15,6 @@ Scope:       Public anchor trail and ongoing work index
 | --- | --- |
 | [`running-ledger.txt`](running-ledger.txt) | Canonical plain-text ledger |
 | [`running-ledger.txt.asc`](running-ledger.txt.asc) | Detached OpenPGP signature |
-| [`running-ledger.txt.asc.ots`](running-ledger.txt.asc.ots) | OpenTimestamps proof for the signature |
 | [`index.html`](index.html) | Human-readable browser view of the ledger |
 
 Direct raw ledger URL:
@@ -27,12 +26,11 @@ https://raw.githubusercontent.com/JGoyd/Running-Ledger/main/running-ledger.txt
 ## Verify
 
 ```powershell
-gpg --keyserver hkps://keys.openpgp.org --recv-keys 6DCB42351237A98BB4740070B36FFC361AE5DAF6
+gpg --keyserver hkps://keys.openpgp.org --recv-keys 4A041F506D894F5EE391743864878B56A2EB2D11
 gpg --verify running-ledger.txt.asc running-ledger.txt
-ots verify running-ledger.txt.asc.ots
 ```
 
-A valid OpenPGP signature verifies that `running-ledger.txt` was signed by the private key corresponding to the published fingerprint. A confirmed OpenTimestamps proof supports that the detached signature existed by the witnessed Bitcoin block time.
+A valid OpenPGP signature verifies that `running-ledger.txt` was signed by the private key corresponding to the published fingerprint.
 
 ## Public Anchors
 

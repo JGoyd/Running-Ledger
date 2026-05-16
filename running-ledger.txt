@@ -1,6 +1,6 @@
 -----BEGIN RUNNING LEDGER-----
 Identity: Joseph R. Goydish II
-PGP Fingerprint: 6DCB 4235 1237 A98B B474 0070 B36F FC36 1AE5 DAF6
+PGP Fingerprint: 4A04 1F50 6D89 4F5E E391 7438 6487 8B56 A2EB 2D11
 Last Updated (UTC): 2026-05-15
 Scope: Public anchor trail and ongoing work index
 
@@ -38,11 +38,10 @@ CNVD-2025-07885 | Apple memory reuse | CNVD-YCGO-202504012519 | Certificate date
 - Append only.
 - Anchors point to public, verifiable records.
 - Sensitive packet bodies stay offline.
-- This ledger is periodically PGP-signed and OpenTimestamps-stamped.
+- This ledger is periodically PGP-signed.
 
 VERIFICATION
 This ledger is cryptographically bound to the fingerprint above.
-The detached PGP signature (running-ledger.txt.asc) and OTS proof
-(running-ledger.txt.asc.ots) are published alongside this file.
+The detached PGP signature (running-ledger.txt.asc) is published alongside this file.
 
 -----END RUNNING LEDGER-----

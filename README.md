@@ -36,11 +36,11 @@ A valid OpenPGP signature verifies that `running-ledger.txt` was signed by the p
 
 | Item | Component | Publication | CVSS | Reference |
 | --- | --- | ---: | ---: | --- |
-| CVE-2025-24085 | CoreMedia use-after-free | 2025-01-27 | 10.0 | Public CVE record |
-| CVE-2025-24201 | WebKit out-of-bounds write | 2025-03-11 | 10.0 | Public CVE record |
-| CVE-2025-31200 | CoreAudio memory corruption via audio decode | 2025-04-16 | 9.8 | Public CVE record |
-| CVE-2025-31201 | Pointer Authentication bypass | 2025-04-16 | 9.8 | Public CVE record |
-| CVE-2025-43300 | ImageIO out-of-bounds write | 2025-08-20 | 10.0 | Public CVE record |
+| CVE-2025-24085 | CoreMedia use-after-free | 2025-01-27 | 10.0 | [Public CVE record](https://nvd.nist.gov/vuln/detail/CVE-2025-24085) |
+| CVE-2025-24201 | WebKit out-of-bounds write | 2025-03-11 | 10.0 | [Public CVE record](https://nvd.nist.gov/vuln/detail/CVE-2025-24201) |
+| CVE-2025-31200 | CoreAudio memory corruption via audio decode | 2025-04-16 | 9.8 | [Public CVE record](https://nvd.nist.gov/vuln/detail/cve-2025-31200) |
+| CVE-2025-31201 | Pointer Authentication bypass | 2025-04-16 | 9.8 | [Public CVE record](https://nvd.nist.gov/vuln/detail/CVE-2025-31201) |
+| CVE-2025-43300 | ImageIO out-of-bounds write | 2025-08-20 | 10.0 | [Public CVE record](https://nvd.nist.gov/vuln/detail/CVE-2025-43300) |
 
 ## Work Log
 
